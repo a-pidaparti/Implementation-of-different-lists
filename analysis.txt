@@ -1,0 +1,24 @@
+Method					LinkedList runtime		ArrayList runtime	Explanation
+
+Boolean add(T element)			O(N)				O(N)			Both were O(N). LinkedList required a single loop to 
+												find the object at the end of the list to set next to
+												the element. ArrayList required 1 iteration to grow and 
+												copy with System.arrayCopy.	Boolean add(int index, T element)	O(N)				O(N)			Both were O(N) because they only required a single loop. 
+												Both needed to iterate through to find the element at index
+												and add element to it.Void clear()				O(1)				O(1)			Both were O(1) because they did not require any loops.Boolean contains(T element)		O(N^2)				O(N)			LinkedList was O(N^2) because it contained a nested for loop.
+												The nested for loop allows the algorithm to run in ten times
+												the speed. ArrayList was O(N) because it contained only 1 loop.T get(int index)			O(N)				O(1)			LinkedList was O(N) because it required 1 loop to find the object,
+												but ArrayList didn’t require any loops because it can be indexed.  Int indexOf(T element)			O(N^2)				O(N)			LinkedList was O(N^2) because it has a nested for loop to increase
+												the efficiency ten fold. ArrayList did not have any nested loops.Boolean isEmpty()			O(N)				O(N)			Both needed to iterate through the entirety of the list to determine
+												if the list truly was empty, so both needed to be O(N).Int lastIndexOf(T element)		O(N^2)				O(N^2)			LinkedList was O(N^2) because, to be more efficient, a nested loop
+												was used to determine if searching anything more than every 10th
+												element was necessary. ArrayList was O(N^2) due to the single recursive
+												call.T set(int index, T element)		O(N)				O(1)			LinkedList was less efficient than ArrayList because it had to be iterated
+												through to find the object at index and replace it. ArrayList can be indexed
+												so the element at index can be found and replaced without any complexity.Int size()				O(N)				O(N)			Both required 1 iteration through the list to count every object within it.Void sort(boolean order)		O(N x log(N))			O(N^2)			LinkedList used a merge sort to sort the list, so the complexity is 
+												O(N x log(N)), but ArrayList uses nested for loops, so it has complexity
+												O(N^2).Boolean remove(T element)		O(N^2)				O(N^2)			LinkedList was O(N^2) because it required a nested for loop to find the object 
+												then a loop to add the subsequent objects to the next list. ArrayList needed 
+												to find the object and add all of the other objects in a loop within that loop.T remove(int index)			O(N)				O(N)			Both were O(N). They only required a single iteration to remove objects. LinkedList
+												needed only one iteration to go to the index, and reroute the previous object to
+												next. ArrayList could easily be indexed and the objects reassigned to a new Array.
